@@ -2,7 +2,7 @@ const transporter = require("../config/email");
 
 async function sendEmail(to, subject, body) {
   const mailOptions = {
-    from: process.env.EMAIL_FROM || "noreply@yourwebsite.com",
+    from: process.env.EMAIL_FROM,
     to,
     subject,
     text: body,
