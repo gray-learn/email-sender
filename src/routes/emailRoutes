@@ -1,21 +1,21 @@
-const express = require('express');
-const { sendEmail } = require('../services/emailService');
+const express = require("express");
+const { sendEmail } = require("../services/emailService");
 
 const router = express.Router();
 
-router.post('/emails', async (req, res) => {
+router.post("/", async (req, res) => {
   const { to, subject, body } = req.body;
 
   if (!to || !subject || !body) {
-    return res.status(400).json({ error: 'Missing required fields' });
+    return res.status(400).json({ error: "Missing required fields" });
   }
 
   try {
     await sendEmail(to, subject, body);
-    res.status(200).json({ message: 'Email sent successfully' });
+    res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send email' });
+    console.error("Error sending email:", error);
+    res.status(500).json({ error: "Failed to send email" });
   }
 });
 

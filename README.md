@@ -34,6 +34,11 @@ To run the project locally:
 npm start
 The server will start on `http://localhost:3000` (or the port specified in your `.env` file).
 
+## Testing
+
+To test the application locally with auto-restart on file changes:
+npx nodemon src/index.js
+
 ## API Usage
 
 To send an email, make a POST request to the `/emails` endpoint:

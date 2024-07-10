@@ -11,12 +11,6 @@
         "src": "/(.*)",
         "dest": "src/index.js"
       }
-    ],
-    "redirects": [
-      {
-        "source": "/(.*)",
-        "destination": "https://newdomain.com/$1",
-        "permanent": true
-      }
     ]
+
   }
