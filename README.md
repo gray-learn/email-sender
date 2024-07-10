@@ -48,8 +48,27 @@ Content-Type: application/json
 ### Response
 
 - Success (200 OK):
+
   ```json
   {
     "message": "Email sent successfully"
   }
   ```
+
+  Error (500 Internal Server Error)
+  {
+  "error": "Failed to send email"
+  }
+
+  Deployment
+  This project is deployed on Vercel. To deploy your own instance:
+
+  1.Install the Vercel CLI
+  npm install -g vercel
+  2.Run the deployment command from the project root:
+  vercel
+  3.Follow the prompts to link your project to a Vercel account and configure your deployment.
+  4.Once deployed, Vercel will provide you with a public URL for your API.
+
+Contributing
+Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes.
